@@ -116,7 +116,7 @@ export default function Tuvalu({ onBackToHome, onOpenResume }: TuvaluProps) {
           {/* Large Cover Image */}
           <div className="aspect-[16/9] w-full rounded-3xl overflow-hidden shadow-xl border border-slate-100">
             <img 
-              src="/src/assets/images/tuvalu_city_1780121262764.png" 
+              src="/images/tuvalu_city.jpg" 
               alt="Tuvalu architectural structure"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"

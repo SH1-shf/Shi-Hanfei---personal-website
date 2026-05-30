@@ -4,7 +4,7 @@ export const PERSONAL_DETAILS = {
   name: "Shi Hanfei",
   role: "Frontend Engineer × Product Designer",
   bio: "I build intelligent digital experiences through design thinking, clean code, and AI-powered workflows.",
-  portrait: "/src/assets/images/shi_hanfei_new_portrait_1780126261695.png",
+  portrait: "/images/shi_hanfei_new_portrait.jpg",
   seekingInternshipText: "Currently seeking Frontend Engineering Internship opportunities.",
   availableText: "Available for 6+ months & 5 days / week",
   email: "1296481195@qq.com",
@@ -59,7 +59,7 @@ export const PROJECTS: Project[] = [
     title: "Sensor-driven Responsive System",
     tags: ["Arduino", "Data Flow", "System Design"],
     description: "Designed a sensor-driven system that transforms environmental data into automated architectural behaviors.",
-    image: "/src/assets/images/sensor_system_1780121226251.png",
+    image: "/images/sensor_system.jpg",
     circleColor: "bg-[#EDF0FE] text-[#7F83FF]",
     caseStudy: {
       overview: "An experimental responsive architectural capsule designed to interact dynamically with the local weather patterns, humidity levels, and human presence vectors via micro-sensor pipelines.",
@@ -75,7 +75,7 @@ export const PROJECTS: Project[] = [
     title: "Tuvalu Virtual City",
     tags: ["Gamification", "Interaction Design", "Virtual Systems"],
     description: "Created a game-based virtual city experience that increases public engagement with climate migration and cultural preservation.",
-    image: "/src/assets/images/pet_memorial_1780121243073.png",
+    image: "/images/tuvalu_city.jpg",
     circleColor: "bg-[#EEFDF4] text-[#4ADE80]",
     caseStudy: {
       overview: "An interactive architectural mapping model aimed at conveying information security, memory archives, and legal identity registries for sinking island nations like Tuvalu.",
@@ -91,7 +91,7 @@ export const PROJECTS: Project[] = [
     title: "Pet Memorial Platform",
     tags: ["UX Design", "Service Design", "Mobile Product"],
     description: "Designed a digital service platform improving transparency, emotional support and user experience during pet memorial services.",
-    image: "/src/assets/images/tuvalu_city_1780121262764.png",
+    image: "/images/pet_memorial.jpg",
     circleColor: "bg-[#EBF7FF] text-[#38BDF8]",
     caseStudy: {
       overview: "A compassionate, feature-rich virtual space designed to help owners memorialize pets and share interactive, permanent memories. Note: The placeholder mock text originally references gamified climate cities due to design drafts.",
@@ -107,7 +107,7 @@ export const PROJECTS: Project[] = [
     title: "Peiligang Smart Museum",
     tags: ["UI Design", "Cultural", "Gamification"],
     description: "Redesigned museum experiences through task systems, achievements, and digital collection interactions.",
-    image: "/src/assets/images/peiligang_museum_1780121280184.png",
+    image: "/images/peiligang_museum.jpg",
     circleColor: "bg-[#F3F4F6] text-[#4B5563]",
     caseStudy: {
       overview: "A transformative interactive experience tailored to the Neolithic Peiligang excavation site, engaging youngsters via tactile gamified challenges and digital reward repositories.",

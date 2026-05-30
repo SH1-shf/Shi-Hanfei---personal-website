@@ -115,7 +115,7 @@ export default function PetMemorial({ onBackToHome, onOpenResume }: PetMemorialP
           {/* Large Cover Image */}
           <div className="aspect-[16/9] w-full rounded-3xl overflow-hidden shadow-xl border border-slate-100">
             <img 
-              src="/src/assets/images/tuvalu_city_1780121262764.png" 
+              src="/images/pet_memorial.jpg" 
               alt="Pet memorial platform visualization"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"

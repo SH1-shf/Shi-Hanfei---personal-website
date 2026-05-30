@@ -106,7 +106,7 @@ export default function SensorSystem({ onBackToHome, onOpenResume }: SensorSyste
           {/* Large Cover Image */}
           <div className="aspect-[16/9] w-full rounded-3xl overflow-hidden shadow-xl border border-slate-100">
             <img 
-              src="/src/assets/images/sensor_system_1780121226251.png" 
+              src="/images/sensor_system.jpg" 
               alt="Sensor system cover image"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"

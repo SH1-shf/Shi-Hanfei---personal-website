@@ -125,7 +125,7 @@ export default function SmartMuseum({ onBackToHome, onOpenResume }: SmartMuseumP
           {/* Large Cover Image */}
           <div className="aspect-[16/9] w-full rounded-3xl overflow-hidden shadow-xl border border-slate-100">
             <img 
-              src="/src/assets/images/peiligang_museum_1780121280184.png" 
+              src="/images/peiligang_museum.jpg" 
               alt="Peiligang Smart Museum exhibits visual"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
