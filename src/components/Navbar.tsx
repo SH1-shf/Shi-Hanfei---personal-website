@@ -80,6 +80,13 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
             Experience
           </button>
           <button
+            onClick={() => scrollToSection('future')}
+            className="hover:text-slate-900 transition-colors cursor-pointer"
+            id="link-future"
+          >
+            Future
+          </button>
+          <button
             onClick={() => scrollToSection('contact')}
             className="hover:text-slate-900 transition-colors cursor-pointer"
             id="link-contact"
@@ -136,6 +143,12 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
             className="text-slate-600 hover:text-slate-900 py-2 text-left"
           >
             Experience
+          </button>
+          <button
+            onClick={() => scrollToSection('future')}
+            className="text-slate-600 hover:text-slate-900 py-2 text-left"
+          >
+            Future
           </button>
           <button
             onClick={() => scrollToSection('contact')}

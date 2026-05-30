@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
+import Future from './components/Future';
 import Contact from './components/Contact';
 import ResumeModal from './components/ResumeModal';
 import { Project } from './types';
@@ -15,11 +16,16 @@ import PetMemorial from './components/projects/PetMemorial';
 import SmartMuseum from './components/projects/SmartMuseum';
 import MilanDesignWeek from './components/experience/MilanDesignWeek';
 
+// Import newly created career plan detail pages
+import FrontendDev from './components/future/FrontendDev';
+import AIProduct from './components/future/AIProduct';
+import ProductManagement from './components/future/ProductManagement';
+
 export default function App() {
   const [currentPath, setCurrentPath] = useState(() => {
     const hash = window.location.hash;
-    if (hash && (hash.startsWith('#/project/') || hash.startsWith('#/experience/'))) {
-      return hash.substring(1); // e.g. "/project/sensor-system" or "/experience/milan-design-week"
+    if (hash && (hash.startsWith('#/project/') || hash.startsWith('#/experience/') || hash.startsWith('#/future/'))) {
+      return hash.substring(1); // e.g. "/project/sensor-system" or "/experience/milan-design-week" or "/future/frontend-development"
     }
     return window.location.pathname;
   });
@@ -30,7 +36,7 @@ export default function App() {
   useEffect(() => {
     const handlePopState = () => {
       const hash = window.location.hash;
-      if (hash && (hash.startsWith('#/project/') || hash.startsWith('#/experience/'))) {
+      if (hash && (hash.startsWith('#/project/') || hash.startsWith('#/experience/') || hash.startsWith('#/future/'))) {
         setCurrentPath(hash.substring(1));
       } else {
         setCurrentPath(window.location.pathname);
@@ -60,6 +66,18 @@ export default function App() {
   const handleSelectExperience = (id: string) => {
     let targetPath = "/";
     if (id === "exp-1") targetPath = "/experience/milan-design-week";
+
+    window.history.pushState({}, '', targetPath);
+    window.location.hash = targetPath;
+    setCurrentPath(targetPath);
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  };
+
+  const handleSelectFutureDir = (dirId: 'frontend' | 'ai' | 'pm') => {
+    let targetPath = "/";
+    if (dirId === "frontend") targetPath = "/future/frontend-development";
+    else if (dirId === "ai") targetPath = "/future/ai-product";
+    else if (dirId === "pm") targetPath = "/future/product-management";
 
     window.history.pushState({}, '', targetPath);
     window.location.hash = targetPath;
@@ -136,6 +154,33 @@ export default function App() {
     );
   }
 
+  if (currentPath === '/future/frontend-development') {
+    return (
+      <>
+        <FrontendDev onBackToHome={handleBackToHome} onOpenResume={() => setIsResumeOpen(true)} />
+        <ResumeModal isOpen={isResumeOpen} onClose={() => setIsResumeOpen(false)} />
+      </>
+    );
+  }
+
+  if (currentPath === '/future/ai-product') {
+    return (
+      <>
+        <AIProduct onBackToHome={handleBackToHome} onOpenResume={() => setIsResumeOpen(true)} />
+        <ResumeModal isOpen={isResumeOpen} onClose={() => setIsResumeOpen(false)} />
+      </>
+    );
+  }
+
+  if (currentPath === '/future/product-management') {
+    return (
+      <>
+        <ProductManagement onBackToHome={handleBackToHome} onOpenResume={() => setIsResumeOpen(true)} />
+        <ResumeModal isOpen={isResumeOpen} onClose={() => setIsResumeOpen(false)} />
+      </>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans antialiased selection:bg-coral/20">
       {/* Scroll Indicator or Header Banner */}
@@ -150,6 +195,7 @@ export default function App() {
         <About />
         <Projects onSelectProject={handleSelectProject} />
         <Experience onSelectExperience={handleSelectExperience} />
+        <Future onSelectDir={handleSelectFutureDir} />
         <Contact />
       </main>
 
